@@ -155,14 +155,51 @@ module alu_tb();
 
        endgroup
        
-       op_cov oc;
        
+        covergroup data_cov;
+        
+        option.name = "cg_data_cov";  
+        
+        all_ops : coverpoint op_set {
+            ignore_bins null_ops = {inv_op1,inv_op2,inv_op3,inv_op4};
+        }
+        
+        a_leg : coverpoint A {
+            bins zeros = {'h00000000};
+            bins ones  = {'hffffffff};
+        }
+        b_leg : coverpoint B {
+            bins zeros = {'h00000000};
+            bins ones  = {'hffffffff};
+        }
+        
+        B_data_00_FF: cross a_leg, b_leg, all_ops {
+            
+            // #B.1 simulate zeros at A ones at B for all the operations
+            bins B1_and          = binsof (all_ops) intersect {and_op} && (binsof (a_leg.zeros) || binsof (b_leg.ones));
+            bins B1_or          = binsof (all_ops) intersect {or_op} && (binsof (a_leg.zeros) || binsof (b_leg.ones));
+            bins B1_add          = binsof (all_ops) intersect {add_op} && (binsof (a_leg.zeros) || binsof (b_leg.ones));
+            bins B1_sub          = binsof (all_ops) intersect {sub_op} && (binsof (a_leg.zeros) || binsof (b_leg.ones));
+            
+            // #B.2 zeros at inputs for or operation
+            bins B2_or_zeros          = binsof (all_ops) intersect {or_op} && (binsof (a_leg.zeros) || binsof (b_leg.zeros));
+            	        
+
+        
+        }
+        
+    endgroup
+       
+       op_cov oc;
+       data_cov dc;
+        
        initial begin: coverage
 	       oc = new();
-	       
+	       dc = new();
 	       forever begin: sample_cov
 		       @(testcase_end) begin
 			       oc.sample();
+			       dc.sample();
 		       end
 	       end
        end : coverage
@@ -353,7 +390,7 @@ module alu_tb();
     // Tester main  
     initial begin : tester
         reset_alu();
-        repeat (10000) begin : tester_main
+        repeat (100000) begin : tester_main
             @(negedge clk);
             destroy_op        = $urandom() % 2; 
             destroy_crc       = $urandom() % 2;
