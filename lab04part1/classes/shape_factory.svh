@@ -8,14 +8,17 @@ class shape_factory;
             "rectangle": begin
                 rectangle_h = new(w, h);
                 make_shape = rectangle_h;
+	            shape_reporter#(rectangle)::store_shape(rectangle_h);
             end
             "square": begin
                 square_h = new(w);
                 make_shape = square_h;
+	            shape_reporter#(square)::store_shape(square_h);
             end
             "triangle": begin
                 triangle_h = new(w, h);
                 make_shape = triangle_h;
+	            shape_reporter#(triangle)::store_shape(triangle_h);
             end
             default : 
                 $fatal (1, {"No such shape: ", shape_type});
