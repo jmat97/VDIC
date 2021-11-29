@@ -16,4 +16,86 @@
 		<nature>ro.amiq.vlogdt.VlogNature</nature>
 		<nature>ro.amiq.vhdldt.VhdlNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>DVT Auto-Linked</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/alu_bfm.sv</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/alu_bfm.sv</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/alu_pkg.sv</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/alu_pkg.sv</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/coverage.svh</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/coverage.svh</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/mtm_Alu.vp</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/mtm_Alu.vp</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/scoreboard.svh</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/scoreboard.svh</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/tb.f</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/tb.f</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/testbench.svh</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/testbench.svh</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/tester.svh</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/tester.svh</locationURI>
+		</link>
+		<link>
+			<name>DVT Auto-Linked/home/student/jmaternowski/VDIC/VDIC/lab04part2/top.sv</name>
+			<type>1</type>
+			<locationURI>DVT_PATH/home/student/jmaternowski/VDIC/VDIC/lab04part2/top.sv</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
