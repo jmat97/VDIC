@@ -26,13 +26,11 @@ class command_monitor extends uvm_component;
 
         bfm.command_monitor_h = this;
 
-        ap                    = new("ap",this);
+        ap = new("ap",this);
 
     endfunction : build_phase
 
     function void write_to_monitor(command_s cmd);
-//        $display("COMMAND MONITOR: A:0x%2h B:0x%2h op: %s", cmd.A, cmd.B, cmd.op.name());
-       // $display("COMMAND MONITOR: op_set:0x%2h ", cmd.op_set);
         ap.write(cmd);
     endfunction : write_to_monitor
 

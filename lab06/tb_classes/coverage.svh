@@ -1,13 +1,13 @@
 class coverage extends uvm_subscriber #(command_s);	
 	`uvm_component_utils(coverage)
 	
-	//virtual alu_bfm bfm;
+
 	
 	bit [98:0] Data;
 	bit [2:0] expected_error;
 	operation_t op_set;
 
-// Covergroup checking the op codes and their sequences
+
 covergroup op_cov;
 
     option.name = "cg_op_cov";

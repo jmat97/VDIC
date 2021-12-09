@@ -13,7 +13,7 @@ class extremum_test extends uvm_test;
 
         // set the factory to produce a add_tester whenever it would produce
         // a base_tester
-        base_tester::type_id::set_type_override(extremum_tester::get_type());
+        random_tester::type_id::set_type_override(extremum_tester::get_type());
     endfunction : build_phase
 
     function void end_of_elaboration_phase(uvm_phase phase);
