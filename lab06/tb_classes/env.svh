@@ -6,7 +6,7 @@ class env extends uvm_env;
      * This is temporary solution -> sequencer/driver will not have this problem
      */
     random_tester random_tester_h;
-	//minmax_tester minmax_tester_h;
+	//extremum_tester extremum_tester_h;
     driver driver_h;
     uvm_tlm_fifo #(command_s) command_f;
 
@@ -18,7 +18,7 @@ class env extends uvm_env;
     function void build_phase(uvm_phase phase);
         command_f         = new("command_f", this);
         random_tester_h   = random_tester::type_id::create("random_tester_h",this);
-        //minmax_tester_h   = minmax_tester::type_id::create("minmax_tester_h",this);
+        //extremum_tester_h   = extremum_tester::type_id::create("extremum_tester_h",this);
         driver_h          = driver::type_id::create("drive_h",this);
         coverage_h        = coverage::type_id::create ("coverage_h",this);
         scoreboard_h      = scoreboard::type_id::create("scoreboard_h",this);
@@ -29,7 +29,7 @@ class env extends uvm_env;
     function void connect_phase(uvm_phase phase);
         driver_h.command_port.connect(command_f.get_export);
         random_tester_h.command_port.connect(command_f.put_export);
-	    //minmax_tester_h.command_port.connect(command_f.put_export);
+	    //extremum_tester_h.command_port.connect(command_f.put_export);
         result_monitor_h.ap.connect(scoreboard_h.analysis_export);
         command_monitor_h.ap.connect(scoreboard_h.cmd_f.analysis_export);
         command_monitor_h.ap.connect(coverage_h.analysis_export);
@@ -40,5 +40,6 @@ class env extends uvm_env;
     endfunction : new
 
 endclass
+
 
 

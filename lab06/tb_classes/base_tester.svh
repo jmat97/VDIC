@@ -14,9 +14,11 @@ virtual class base_tester extends uvm_component;
     protected pure virtual function operation_t get_op();    
     protected pure virtual function operation_t get_valid_op();
     protected pure virtual function byte get_data();    
-    protected pure virtual function [10:0] get_data_packet();   
+    protected pure virtual function [10:0] get_data_packet(); 
+    
     protected pure virtual function [10:0] get_ctl_packet(input [31:0] B, input [31:0] A, input [2:0] op);
 	protected pure virtual function [98:0] get_packet(input [2:0] op_set, input [2:0] expected_error);
+    //error related functions
     protected pure virtual function bit [3:0] nextCRC4_D68(input [67:0] data_in);
     protected pure virtual function [2:0] expected_error(input [2:0] op_set);
     

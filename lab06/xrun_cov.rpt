@@ -1,13 +1,13 @@
-*I,RUNLD: Successfully loaded run /home/student/jmaternowski/VDIC/VDIC/lab06/cov_work/scope/minmax_test.
+*I,RUNLD: Successfully loaded run /home/student/jmaternowski/VDIC/VDIC/lab06/cov_work/scope/random_test.
 *I,MERGL1: Merging Simulation Coverage ...
 ----------------------------
 *I,MERGL1: Preparing target model ...
-*I,MERGL1: Reading model of primary run (cov_work/scope/random_test) as initial model: cov_work/scope/icc_14667bba_5adc89dd.ucm
+*I,MERGL1: Reading model of primary run (cov_work/scope/extremum_test) as initial model: cov_work/scope/icc_14667bba_5adc89dd.ucm
 *I,MERGL1: Target model generated successfully.
 *I,MERGL1: Projecting Simulation ucd data into the target model ...
-*I,MERGL2:   cov_work/scope/random_test:
+*I,MERGL2:   cov_work/scope/extremum_test:
 *I,MERGL3:       Data is projected in to the target model.
-*I,MERGL2:   cov_work/scope/minmax_test:
+*I,MERGL2:   cov_work/scope/random_test:
 *I,MERGL3:       Data is projected in to the target model.
 *I,MERGL1: Writing output database cov_work/scope/merged_results:
 *I,MERGL2:   Model: cov_work/scope/merged_results/icc_14667bba_5adc89dd.ucm
